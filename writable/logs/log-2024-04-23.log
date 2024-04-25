@@ -1,0 +1,364 @@
+CRITICAL - 2024-04-23 05:57:58 --> ErrorException: Undefined property: App\Controllers\Home::$load
+[Method: POST, Route: Login]
+in APPPATH/Controllers/Home.php on line 17.
+ 1 APPPATH/Controllers/Home.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:07:20 --> Error: Class "App\Controllers\UserModel" not found
+[Method: POST, Route: Login]
+in APPPATH/Controllers/Home.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:12:06 --> TypeError: App\Controllers\Home::login(): Return value must be of type string, none returned
+[Method: POST, Route: Login]
+in APPPATH/Controllers/Home.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:17:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "singup.php"
+[Method: POST, Route: Login]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(31): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:17:27 --> ErrorException: Undefined array key "email"
+[Method: POST, Route: Login]
+in APPPATH/Views/signup.php on line 10.
+ 1 APPPATH/Views/signup.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/iantsogod/server/app/Views/signup.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(31): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:22:44 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: Login]
+in APPPATH/Models/UserModel.php on line 21.
+ 1 APPPATH/Controllers/Home.php(26): App\Models\UserModel->checkLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-04-23 06:24:46 --> mysqli_sql_exception: Table 'commerce.utilisateur' doesn't exist in /home/iantsogod/server/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /home/iantsogod/server/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /home/iantsogod/server/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/iantsogod/server/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/iantsogod/server/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 /home/iantsogod/server/system/Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/iantsogod/server/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/iantsogod/server/app/Models/UserModel.php(19): CodeIgniter\BaseModel->first()
+#7 /home/iantsogod/server/app/Controllers/Home.php(26): App\Models\UserModel->checkLogin()
+#8 /home/iantsogod/server/system/CodeIgniter.php(933): App\Controllers\Home->login()
+#9 /home/iantsogod/server/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /home/iantsogod/server/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/iantsogod/server/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /home/iantsogod/server/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/iantsogod/server/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2024-04-23 06:24:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'commerce.utilisateur' doesn't exist
+[Method: POST, Route: Login]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Models/UserModel.php(19): CodeIgniter\BaseModel->first()
+ 5 APPPATH/Controllers/Home.php(26): App\Models\UserModel->checkLogin()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:24:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'commerce.utilisateur' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(19): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/Home.php(26): App\Models\UserModel->checkLogin()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 06:24:46 --> [Caused by] mysqli_sql_exception: Table 'commerce.utilisateur' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Models/UserModel.php(19): CodeIgniter\BaseModel->first()
+ 8 APPPATH/Controllers/Home.php(26): App\Models\UserModel->checkLogin()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->login()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:01:34 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: Sign_up]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->signup()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:29:17 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: List]
+in APPPATH/Views/userlist.php on line 23.
+ 1 APPPATH/Views/userlist.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/iantsogod/server/app/Views/userlist.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:30:22 --> ErrorException: Undefined array key "password"
+[Method: GET, Route: List]
+in APPPATH/Views/userlist.php on line 24.
+ 1 APPPATH/Views/userlist.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/iantsogod/server/app/Views/userlist.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:30:23 --> ErrorException: Undefined array key "password"
+[Method: GET, Route: List]
+in APPPATH/Views/userlist.php on line 24.
+ 1 APPPATH/Views/userlist.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/iantsogod/server/app/Views/userlist.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-04-23 08:50:53 --> mysqli_sql_exception: Unknown column 'password' in 'where clause' in /home/iantsogod/server/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /home/iantsogod/server/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /home/iantsogod/server/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/iantsogod/server/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/iantsogod/server/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+#4 /home/iantsogod/server/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/iantsogod/server/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/iantsogod/server/app/Controllers/Home.php(58): CodeIgniter\BaseModel->findAll()
+#7 /home/iantsogod/server/system/CodeIgniter.php(933): App\Controllers\Home->tri()
+#8 /home/iantsogod/server/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /home/iantsogod/server/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/iantsogod/server/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /home/iantsogod/server/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/iantsogod/server/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2024-04-23 08:50:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password' in 'where clause'
+[Method: POST, Route: Tri]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Home.php(58): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->tri()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:50:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Home.php(58): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->tri()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:50:53 --> [Caused by] mysqli_sql_exception: Unknown column 'password' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Home.php(58): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->tri()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 08:51:14 --> TypeError: App\Controllers\Home::tri(): Return value must be of type string, none returned
+[Method: POST, Route: Tri]
+in APPPATH/Controllers/Home.php on line 59.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->tri()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-04-23 10:19:54 --> mysqli_sql_exception: Duplicate entry 'irazafindrazaka@mit-ua.mg' for key 'email' in /home/iantsogod/server/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /home/iantsogod/server/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /home/iantsogod/server/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/iantsogod/server/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/iantsogod/server/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /home/iantsogod/server/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/iantsogod/server/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /home/iantsogod/server/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /home/iantsogod/server/app/Models/UserModel.php(34): CodeIgniter\Model->insert()
+#8 /home/iantsogod/server/app/Controllers/Home.php(38): App\Models\UserModel->createUser()
+#9 /home/iantsogod/server/system/CodeIgniter.php(933): App\Controllers\Home->signup()
+#10 /home/iantsogod/server/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#11 /home/iantsogod/server/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/iantsogod/server/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 /home/iantsogod/server/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/iantsogod/server/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#15 {main}
+CRITICAL - 2024-04-23 10:19:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'irazafindrazaka@mit-ua.mg' for key 'email'
+[Method: POST, Route: Sign_up]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Models/UserModel.php(34): CodeIgniter\Model->insert()
+ 6 APPPATH/Controllers/Home.php(38): App\Models\UserModel->createUser()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->signup()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:19:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'irazafindrazaka@mit-ua.mg' for key 'email'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert()
+ 7 APPPATH/Models/UserModel.php(34): CodeIgniter\Model->insert()
+ 8 APPPATH/Controllers/Home.php(38): App\Models\UserModel->createUser()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->signup()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:19:54 --> [Caused by] mysqli_sql_exception: Duplicate entry 'irazafindrazaka@mit-ua.mg' for key 'email'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert()
+ 8 APPPATH/Models/UserModel.php(34): CodeIgniter\Model->insert()
+ 9 APPPATH/Controllers/Home.php(38): App\Models\UserModel->createUser()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->signup()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:25:28 --> Error: Call to a member function paginate() on array
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:27:00 --> Error: Call to undefined method CodeIgniter\HTTP\IncomingRequest::paginate()
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:27:01 --> Error: Call to undefined method CodeIgniter\HTTP\IncomingRequest::paginate()
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:27:02 --> Error: Call to undefined method CodeIgniter\HTTP\IncomingRequest::paginate()
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:27:14 --> Error: Call to a member function paginate() on array
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-23 10:27:15 --> Error: Call to a member function paginate() on array
+[Method: GET, Route: List]
+in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->user()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
